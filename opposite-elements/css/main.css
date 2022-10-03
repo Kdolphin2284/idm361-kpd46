@@ -58,14 +58,13 @@ main::after {
 }
 
 #content {
-    max-width: 320px;
+    max-width: 75%;
     width: 100%;
     margin: auto;
 }
 
 svg {
     max-width: 100%;
-    width: 80%;
     margin: 0 auto;
     display: block;
     height: fit-content;
@@ -128,7 +127,7 @@ svg {
 }
 
 #content {
-    max-width: 500px;
+    max-width: 50%;
     width: 100%;
     margin: auto;
 }
