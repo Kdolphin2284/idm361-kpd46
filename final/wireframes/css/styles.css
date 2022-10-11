@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "Poppins-Semibold";
+    src: url('../fonts/Poppins-SemiBoldItalic.ttf');
+    src: url('../fonts/Poppins-SemiBold.woff');
+    src: url('../fonts/Poppins-SemiBold.woff2');
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: #ffcbcb;
+}
+h1 {
+    font-size: 60px;
+    font-family: Poppins-Semibold;
+    color: #000;
+    margin: 0;
+}
+h1 span {
+    font-weight: 900;
+}
+h2 {
+    font-size: 40px;
+    font-family: Poppins-Semibold;
+    display: inline-block;
+    margin: 0;
+    color: #000;
+}
+h2 span {
+    font-weight: 900;
+}
+h3 {
+    font-size: 24px;
+    text-align: left;
+    font-family: Poppins-Semibold;
+    margin: 0;
+    color: #fff;
+}
+h4 {
+    font-size: 20px;
+    font-family: Poppins-Semibold;
+    margin: 0;
+    color: #fff;
+}
+p {
+    font-family: Poppins-Semibold;
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+}
+
+li {
+    font-family: Poppins-Semibold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+}
+.col-1-1 {
+    width: 100%;
+}
+.col-1-2 {
+    width: 50%;
+}
+.col-1-3 {
+    width: 33%;
+}  
+.col-1-4 {
+    width: 25%;
+}
+img {
+    width: inherit;
+    display: block;
+}
+
+/* ///////////////////////////////////// */
+/* ////////// NON GENERAL CSS ////////// */
+/* ///////////////////////////////////// */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+#howItWorks .col-1-1:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#infoBlock {
+    align-items: flex-start;
+}
+main .container:not(:first-child) {
+    padding-top: 50px;
+}
+main .container:not(:last-child) {
+    padding-bottom: 50px;
+} 
+main {
+    padding: 100px 0;
+}
+#information .col-1-1:first-child, #howItWorks .col-1-1:first-child {
+    margin-bottom: 35px;
+}
+#howItWorks .col-1-1:last-child .col-1-3 .image-hover {
+    position: relative;
+}
+.textHover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+#howItWorks .col-1-1:last-child .col-1-3:nth-child(2) .image-hover .textHover {
+    opacity: .7;
+    bottom: -6%;
+}
+.image-hover {
+    height: inherit;
+    width: 100%;
+}
+.size-text {
+    color: #000 !important;
+    font-size: 22px;
+}
+.textHover h4, .textHover p {
+    color: #fff;
+}
+.textHover h4 {
+    margin-bottom: 8px;
+}
+#howItWorks .col-1-1:last-child .col-1-3:last-child .image-hover .textHover {
+    opacity: 1;
+    transform: translateY(-50%);
+    top: 50%;
+}
+#infoBlock ul {
+    padding: 0;
+}
+#infoBlock ul li {
+    list-style: circle;
+}  
+#infoBlock ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+#infoBlock .col-1-4 h3, #infoBlock .col-1-4 ul li {
+    margin: 0 15px;
+}
+#information h2 span, #howItWorks h2 span {
+    color: #f96060;
+}
+#intro .col-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#intro h1 span {
+    color: #f96060;
+}
+#howItWorks .col-1-3 {
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 1280px) {
+h2 {
+    font-size: 34px;
+}
+h3 {
+    font-size: 20px;
+}
+li {
+    font-size: 15px;
+}
+main {
+    margin: 0 30px;
+}
+h4 {
+    font-size: 18px;
+}
+.textHover p {
+    font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 1169px) {
+h4 {
+    font-size: 15px;
+}
+.textHover p {
+    font-size: 12px;
+}
+}
+
+@media only screen and (max-width: 1023px) {
+li {
+    font-size: 14px;
+    line-height: 20px;
+}
+h1 {
+    font-size: 46px;
+}
+h3 {
+    font-size: 16px;
+}
+#howItWorks .col-1-1:last-child {
+    flex-wrap: wrap;
+}
+#howItWorks .col-1-1:last-child .col-1-3 {
+    width: 47.5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+    main {
+        padding: 50px 0;
+    }
+
+h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+  
+  #infoBlock .col-1-4 {
+    width: 100%;
+  }
+  
+  #infoBlock ul {
+    margin: 10px 0 15px 0;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  #howItWorks .col-1-1:last-child .col-1-3 {
+    margin: 0;
+    width: 100%;
+  }
+  
+  #howItWorks .col-1-1:last-child .col-1-3:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+}
