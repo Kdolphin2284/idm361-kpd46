@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="App">
+    <meta name="apple-mobile-web-app-title" content="Lists.">
     <meta name="format-detection" content="telephone=no">
     
-    <link rel="stylesheet" href="css-add2home.css">
+    <link rel="stylesheet" href="css/css-add2home.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -41,14 +41,14 @@
     <div id="content">
         <nav>
             <div id="nav-title">
-                <h3>Lists.</h3>
+                    <h1>Lists.</h1>
             </div>
         </nav>
-        <main>
+        <main id="home">
             <div id="add-to-list">
                 <form>
                     <label for="enter-list-item" hidden>Add List Item</label>
-                    <input type="text" id="enter-list-item" name="enter-list-item" placeholder="add something">
+                    <textarea id="enter-list-item" name="enter-list-item" placeholder="add something"></textarea>
                     <button type="submit" value="submit">submit</button>
                 </form>
             </div>
@@ -62,6 +62,9 @@
         <footer>
 
         </footer>
+        <div id="landscape-message">
+            <h2>Please turn your device to portrait orientation</h2>
+        </div>
     </div>
     <script src="scripts/js-refresh-manifest.js" type="text/javascript"></script>
 

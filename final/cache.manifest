@@ -1,0 +1,52 @@
+CACHE MANIFEST
+# version 001
+
+CACHE:
+
+# CSS
+css/css-add2home.css
+css/css-normalize.css
+css/css-main.css
+
+
+# IMAGES
+media/images/app-icon/20.png
+media/images/app-icon/29.png
+media/images/app-icon/40.png
+media/images/app-icon/50.png
+media/images/app-icon/57.png
+media/images/app-icon/58.png
+media/images/app-icon/60.png
+media/images/app-icon/72.png
+media/images/app-icon/76.png
+media/images/app-icon/80.png
+media/images/app-icon/87.png
+media/images/app-icon/100.png
+media/images/app-icon/114.png
+media/images/app-icon/120.png
+media/images/app-icon/144.png
+media/images/app-icon/152.png
+media/images/app-icon/167.png
+media/images/app-icon/180.png
+media/images/app-icon/1024.png
+media/images/open-list-arrow.svg
+
+# HTML
+index.html
+list/list.html
+
+# JS
+scripts/js-refresh-manifest.js
+scripts/js-add2home.js
+scripts/js-main.js
+
+# FONTS
+fonts/Poppins-Medium.ttf
+fonts/Poppins-Medium.woff
+fonts/Poppins-Medium.woff2
+fonts/Poppins-Regular.ttf
+fonts/Poppins-Regular.woff
+fonts/Poppins-Regular.woff2
+
+## for any resources not listed above will require the user to be online
+NETWORK:
