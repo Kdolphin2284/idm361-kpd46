@@ -34,26 +34,30 @@
     <link rel="apple-touch-icon" sizes="180x180" href="media/images/app-icon/180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="media/images/app-icon/1024.png">
 
-    <title>Lists</title>
+    <title>Lists.</title>
 </head>
 
 <body>
     <div id="content">
         <nav>
             <div id="nav-title">
-                <h3>Lists</h3>
-            </div>
-            <div id="hamburger-menu">
-                <div class="hamburger-rectangle"></div>
-                <div class="hamburger-rectangle"></div>
-                <div class="hamburger-rectangle"></div>
+                <h3>Lists.</h3>
             </div>
         </nav>
         <main>
-
-            <!-- Media query for orientation RESEARCH!  -->
-            <!-- Add after or before text if orientation changes -->
-            
+            <div id="add-to-list">
+                <form>
+                    <label for="enter-list-item" hidden>Add List Item</label>
+                    <input type="text" id="enter-list-item" name="enter-list-item" placeholder="add something">
+                    <button type="submit" value="submit">submit</button>
+                </form>
+            </div>
+            <div id="open-list">
+                <a href="list/list.html">
+                    open list
+                    <span><img src="media/images/open-list-arrow.svg"></span>
+                </a>
+            </div>
         </main>
         <footer>
 
