@@ -37,11 +37,16 @@
     <title>Lists.</title>
 </head>
 
-<body>
+<body id="body">
     <div id="content">
         <nav>
             <div id="nav-title">
                     <h1>Lists.</h1>
+            </div>
+            <div id="your-list-nav-title">
+                <button onclick="hideList('none');">
+                    <h1>Lists.</h1>
+                </button>
             </div>
         </nav>
         <main id="home">
@@ -53,10 +58,32 @@
                 </form>
             </div>
             <div id="open-list">
-                <a href="list/list.html">
+                <button onclick="showList('flex');">
                     open list
                     <span><img src="media/images/open-list-arrow.svg"></span>
-                </a>
+                </button>
+            </div>
+        </main>
+        <main id="list-page">
+            <div id="listItemModal">
+                <img id="closeModal" src="media/images/xIcon.svg" alt="X Icon">
+                <h3 id="modalTitle">task:</h3>
+                <p id="modalText"></p>
+            </div>
+            <div id="your-list">
+                <h2>your list</h2>
+                <ul>
+                    <li list-item>go to the gym on tuesday and thursday</li>
+                    <li list-item>finish idm361 homework (due monday night)</li>
+                    <li list-item>take the trash out</li>
+                </ul>
+            </div>
+            <div id="completed-list">
+                <h2>completed</h2>
+                <ul>
+                    <li completed-list-item>finish idm371 homework (due sunday night)</li>
+                    <li completed-list-item>go grocery shopping</li>
+                </ul>
             </div>
         </main>
         <footer>
