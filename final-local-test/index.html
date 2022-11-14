@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Lists.">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="stylesheet" href="css/css-add2home.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- MAKE SIMPLE LOGO, UPLOAD IMAGES -->
+    <link rel="apple-touch-icon" sizes="20x20" href="media/images/app-icon/20.png">
+    <link rel="apple-touch-icon" sizes="29x29" href="media/images/app-icon/29.png">
+    <link rel="apple-touch-icon" sizes="40x40" href="media/images/app-icon/40.png">
+    <link rel="apple-touch-icon" sizes="50x50" href="media/images/app-icon/50.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="media/images/app-icon/57.png">
+    <link rel="apple-touch-icon" sizes="58x58" href="media/images/app-icon/58.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="media/images/app-icon/60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/images/app-icon/72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="media/images/app-icon/76.png">
+    <link rel="apple-touch-icon" sizes="80x80" href="media/images/app-icon/80.png">
+    <link rel="apple-touch-icon" sizes="87x87" href="media/images/app-icon/87.png">
+    <link rel="apple-touch-icon" sizes="100x100" href="media/images/app-icon/100.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/images/app-icon/114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="media/images/app-icon/120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="media/images/app-icon/144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="media/images/app-icon/152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="media/images/app-icon/167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/images/app-icon/180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="media/images/app-icon/1024.png">
+
+    <!-- <script src="scripts/data-script.js"></script> -->
+
+    <title>Lists.</title>
+</head>
+
+<body id="body">
+    <div id="content">
+        <nav>
+            <div id="nav-title">
+                    <h1>Lists.</h1>
+            </div>
+            <div id="your-list-nav-title">
+                <button onclick="hideList('none');">
+                    <h1>Lists.</h1>
+                </button>
+            </div>
+        </nav>
+        <main id="home">
+            <div id="add-to-list">
+                <form>
+                    <label for="enter-list-item" hidden>Add List Item</label>
+                    <textarea type="text" id="listItem" name="listItem" placeholder="add something"></textarea>
+                    <button onclick="writeData();">submit</button>
+                </form>
+            </div>
+            <div id="open-list">
+                <button onclick="showList('flex');">
+                    open list
+                    <span><img src="media/images/open-list-arrow.svg"></span>
+                </button>
+            </div>
+        </main>
+        <main id="list-page">
+            <div id="listItemModal">
+                <img id="closeModal" src="media/images/xIcon.svg" alt="X Icon">
+                <h3 id="modalTitle">task:</h3>
+                <p id="modalText"></p>
+                <button id="completionButton"></button>
+            </div>
+            <div id="your-list">
+                <h2>your list</h2>
+                <ul id="listData"></ul>
+            </div>
+            <div id="completed-list">
+                <h2>completed</h2>
+                <ul>
+                    <li completed-list-item>finish idm371 homework (due sunday night)</li>
+                    <li completed-list-item>go grocery shopping</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <div id="landscape-message">
+            <h2>Please turn your device to portrait orientation</h2>
+        </div>
+    </div>
+    <script src="scripts/js-refresh-manifest.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        // Customize config variable BEFORE loading add2home.js file
+        var addToHomeConfig = {
+          touchIcon: true
+        };
+    </script>
+    
+    <script src="scripts/js-add2home.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

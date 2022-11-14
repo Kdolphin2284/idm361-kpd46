@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html manifest="cache.manifest">
+
+<head>
+  <title>WGF</title>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css-normalize.css">
+  <link rel="stylesheet" href="css-add2home.css">
+  <link rel="stylesheet" href="css-main.css">
+  <!-- iPhone ICON -->
+  <link rel="apple-touch-icon" href="img/icon-57x57.png" sizes="57x57">
+  <!-- iPhone ICON (Retina) -->
+  <link rel="apple-touch-icon" href="img/icon-114x114.png" sizes="114x114">
+</head>
+
+<body onload="readData();">
+  <!-- PAGE CONTENT -->
+  <div id="wrapper">
+    <form>
+      <div id="gather">
+        <hr>
+        <p>
+          v17: <input type="text" name="firstName" id="firstName" placeholder="First Name">
+        </p>
+        <p>
+          Age: <input type="number" name="age" id="age" value="18">
+        </p>
+        <hr>
+        <button type="button" name="addRec" id="addRec" onclick="writeData()">Add</button>
+        <button type="button" name="delArray" id="delArray" onclick="removeData()">Reset</button>
+        <hr>
+        <button type="button" name="prev" id="prev" onclick="displayPrevRec()">Prev</button>
+        <input type="text" name="ndx_result" id="ndx_result" value="0" disabled>
+        <button type="button" name="next" id="next" onclick="displayNextRec()">Next</button>
+      </div>
+    </form>
+  </div>
+  <div id="widescreen">
+    <p>To witness all this AWESOMENESS!</p>
+    <h1>ROTATE your device to PORTRAIT view.</h1>
+  </div>
+  <!-- JAVASCRIPT-->
+  <script src="js-refresh-manifest.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    //	Customize configuration variable BEFORE loading addToHome.js file
+    var addToHomeConfig = {
+      touchIcon: true
+    };
+  </script>
+  <script src="js-add2home.js"></script>
+  <script src="js-main.js"></script>
+</body>
+
+</html>
