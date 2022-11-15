@@ -54,11 +54,13 @@ function itemClicked(element, innerHTML) {
 }
 
 function completedItemClicked(element, innerHTML) {
-    console.log("I have been clicked! My inner HTML: " + innerHTML);
-    modalText.innerHTML = innerHTML;
-    listItemModal.style.display = 'flex';
-    document.documentElement.style.setProperty('--before', "block");
-    modalTitle.innerHTML = 'completed task:';
+  console.log("I have been clicked! My inner HTML: " + innerHTML);
+  modalText.innerHTML = innerHTML;
+  listItemModal.style.display = 'flex';
+  document.documentElement.style.setProperty('--before', "block");
+  modalTitle.innerHTML = 'completed task:';
+  completionButton.innerHTML = 'delete from completed';
+  completionButton.style.background = '#FF7474';
 }
 
 closeModal.addEventListener("click", function(){
@@ -142,7 +144,6 @@ function readData() {
       } else {
         // Initize data if it is empty/invalid
         listItem.value = "";
-      //   age.value = 0;
         mainNdx = 0;
       }
     } else {
@@ -167,7 +168,7 @@ function writeData() {
     // localStorage.jwt_Ages = ageStr;
     localStorage.kpd_Ndx = mainNdx;
     //
-    ndx_result.value = mainNdx;
+    // ndx_result.value = mainNdx;
     alert('List item ADDED.')
   } else {
     // Sorry! No Web Storage support..
@@ -203,6 +204,7 @@ function displayPrevRec() {
   }
 }
 
+// NOT USED YET
 function removeData() {
   console.log("removeData called");
   if (typeof (Storage) !== "undefined") {
@@ -247,101 +249,33 @@ function deleteitem() {
 }
 
 
-function removeData() {
-    console.log("removeData called");
-    if (typeof (Storage) !== "undefined") {
-      if (confirm('Are you sure you want to remove ALL records?')) {
-        localStorage.removeItem("kpd_listItems");
-      //   localStorage.removeItem("jwt_Ages");
-        localStorage.removeItem("kpd_Ndx");
-        // Initize data if it is empty/invalid
-        listItem.value = "";
-        age.value = 0;
-        ndx_result.value = 0;
-        // Clear arrays
-        listItemArray = [];
-      //   ageArray = [];
-        mainNdx = 0;
-      }
-    } else {
-      // Sorry! No Web Storage support..
-      alert('This browser does NOT support local storage');
-    }
-  }
-
-  function attachClickListeners() {
-    var elements = document.querySelectorAll('[list-item]');
-    for(var i in elements) {
-        (elements[i]).onclick = function(event) {
-            let target = event.target || event.srcElement;
-            itemClicked(target, target.innerHTML);
-        };
-    }
-
-    var completedElements = document.querySelectorAll('[completed-list-item]');
-    for(var i in completedElements) {
-        (completedElements[i]).onclick = function(event) {
-            let target = event.target || event.srcElement;
-            completedItemClicked(target, target.innerHTML);
-        };
-    }
-}
-
-
 // working here 
 
-function itemClicked(element, innerHTML) {
-    console.log("I have been clicked! My inner HTML: " + innerHTML);
-    modalText.innerHTML = innerHTML;
-    listItemModal.style.display = 'flex';
-    document.documentElement.style.setProperty('--before', "block");
-    modalTitle.innerHTML = 'task:';
-    completionButton.innerHTML = 'add to completed';
-    completionButton.style.background = 'rgb(49, 201, 128)';
+// function itemClicked(element, innerHTML) {
+//     console.log("I have been clicked! My inner HTML: " + innerHTML);
+//     modalText.innerHTML = innerHTML;
+//     listItemModal.style.display = 'flex';
+//     document.documentElement.style.setProperty('--before', "block");
+//     modalTitle.innerHTML = 'task:';
+//     completionButton.innerHTML = 'add to completed';
+//     completionButton.style.background = 'rgb(49, 201, 128)';
 
-    let currentHTML = innerHTML;
-    console.log('Here is the current HTML: ' + currentHTML)
+//     let currentHTML = innerHTML;
+//     console.log('Here is the current HTML: ' + currentHTML)
 
-    betterHTML = currentHTML.replaceAll('<br>', '');
-    console.log('The better inner html of this item is: ' + betterHTML);
+//     betterHTML = currentHTML.replaceAll('<br>', '');
+//     console.log('The better inner html of this item is: ' + betterHTML);
 
-    // If a string contains <br>, the index is -1
-    // If array includes string that contains
+//     let indexOfListItem = listItemArray.indexOf(betterHTML);
 
-    let indexOfListItem = listItemArray.indexOf(betterHTML);
+//     console.log('The index of this item is: ' + indexOfListItem);
+
+//     if (listItemArray.includes(currentHTML)) {
+//         console.log('yeeeees');
+//     } else {
+//         console.log('noooooope');
+//     }
     
-    // str.replace(/[\r\n]/gm, '');
-
-    console.log('The index of this item is: ' + indexOfListItem);
-
-    if (listItemArray.includes(currentHTML)) {
-        console.log('yeeeees');
-    } else {
-        console.log('noooooope');
-    }
-
-    // const itemMatch = listItemArray.find(element => {
-    //     if (element.match(currentHTML)) {
-    //       console.log('Matches!');
-            
-    //       console.log(listItemArray.indexOf({
-    //         currentHTML
-    //       }));
-    //     } else {
-    //         console.log('No Match.');
-    //     }
-    //   });
-    
-}
-
-function completedItemClicked(element, innerHTML) {
-    console.log("I have been clicked! My inner HTML: " + innerHTML);
-    modalText.innerHTML = innerHTML;
-    listItemModal.style.display = 'flex';
-    document.documentElement.style.setProperty('--before', "block");
-    modalTitle.innerHTML = 'completed task:';
-    completionButton.innerHTML = 'delete completed task';
-    completionButton.style.background = '#FF7474';
-}
+// }
 
 // END OF WORK AREA

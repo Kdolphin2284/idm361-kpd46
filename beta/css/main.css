@@ -273,6 +273,16 @@ ul li:not(:last-child) {
     text-decoration: line-through;
 }
 
+#list-page {
+    display: none;
+}
+
+#completionButton {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
 @media only screen and (max-height: 700px) {
     #open-list {
         bottom: 14%;
@@ -296,7 +306,7 @@ ul li:not(:last-child) {
         display: none !important;
     }
     #content {
-        background: #393939;
+        background: #fff;
         width: 100vw;
         height: 100vh;
         max-width: 100%;
@@ -304,8 +314,23 @@ ul li:not(:last-child) {
         justify-content: center;
         align-items: center;
     }
+    html {
+        background: #fff;
+    }
+    body {
+        background: #fff;
+    }
     #landscape-message {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #landscape-message img {
+        margin-top: 25px;
+    }
+    #landscape-message h2 {
+        color: #000;
     }
 }
 
@@ -319,15 +344,4 @@ ul li:not(:last-child) {
     #landscape-message h2 {
         font-size: 16px;
     }
-}
-
-#list-page {
-    display: none;
-}
-
-
-
-#completionButton {
-    width: 100%;
-    padding: 15px 25px;
 }
