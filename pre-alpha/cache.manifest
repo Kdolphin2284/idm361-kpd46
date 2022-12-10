@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 006
+# version 002
 
 CACHE:
 
@@ -31,7 +31,6 @@ media/images/app-icon/180.png
 media/images/app-icon/1024.png
 media/images/open-list-arrow.svg
 media/images/xIcon.svg
-media/images/rotateDevice.svg
 
 # HTML
 index.html

@@ -169,10 +169,10 @@ function writeData() {
     localStorage.kpd_Ndx = mainNdx;
     //
     // ndx_result.value = mainNdx;
-    alert('List item ADDED.')
+    // alert('List item ADDED.')
   } else {
     // Sorry! No Web Storage support..
-    alert('This browser does NOT support local storage');
+    // alert('This browser does NOT support local storage');
   }
 }
 

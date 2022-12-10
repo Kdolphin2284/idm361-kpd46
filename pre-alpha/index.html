@@ -34,8 +34,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="media/images/app-icon/180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="media/images/app-icon/1024.png">
 
-    <!-- <script src="scripts/data-script.js"></script> -->
-
     <title>Lists.</title>
 </head>
 
@@ -55,8 +53,8 @@
             <div id="add-to-list">
                 <form>
                     <label for="enter-list-item" hidden>Add List Item</label>
-                    <textarea type="text" id="listItem" name="listItem" placeholder="add something"></textarea>
-                    <button onclick="writeData();">submit</button>
+                    <textarea id="enter-list-item" name="enter-list-item" placeholder="add something"></textarea>
+                    <button type="submit" value="submit">submit</button>
                 </form>
             </div>
             <div id="open-list">
@@ -71,17 +69,21 @@
                 <img id="closeModal" src="media/images/xIcon.svg" alt="X Icon">
                 <h3 id="modalTitle">task:</h3>
                 <p id="modalText"></p>
-                <button id="completionButton" onclick="workWithData()"></button>
             </div>
             <div id="your-list">
                 <h2>your list</h2>
-                <ul id="listData"></ul>
+                <ul>
+                    <li list-item>go to the gym on tuesday and thursday</li>
+                    <li list-item>finish idm361 homework (due monday night)</li>
+                    <li list-item>take the trash out</li>
+                </ul>
             </div>
             <div id="completed-list">
                 <h2>completed</h2>
-                <ul id="completedListData"></ul>
-
-
+                <ul>
+                    <li completed-list-item>finish idm371 homework (due sunday night)</li>
+                    <li completed-list-item>go grocery shopping</li>
+                </ul>
             </div>
         </main>
         <footer>
@@ -89,7 +91,6 @@
         </footer>
         <div id="landscape-message">
             <h2>Please turn your device to portrait orientation</h2>
-            <img src="media/images/rotateDevice.svg" alt="Rotate Device icon">
         </div>
     </div>
     <script src="scripts/js-refresh-manifest.js" type="text/javascript"></script>
@@ -102,6 +103,7 @@
     </script>
     
     <script src="scripts/js-add2home.js"></script>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
